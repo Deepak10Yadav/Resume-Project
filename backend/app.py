@@ -16,7 +16,16 @@ from backend.routes.screening_routes import screening_bp
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = MAX_CONTENT_LENGTH
-CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5173"])
+
+# Allow both local dev frontend and the deployed Vercel frontend
+CORS(
+    app,
+    origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://resume-project-989.vercel.app",
+    ],
+)
 
 # Register blueprints
 app.register_blueprint(job_bp)
