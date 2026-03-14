@@ -1,4 +1,4 @@
-const API_BASE = ''; // Same origin - Vite proxies /api to backend
+const API_BASE = 'https://resume-project-h8sy.onrender.com'; // Same origin - Vite proxies /api to backend
 
 async function parseError(res: Response, fallback: string): Promise<string> {
   const text = await res.text();
