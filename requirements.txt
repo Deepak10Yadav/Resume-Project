@@ -1,0 +1,10 @@
+flask
+flask-cors
+pandas
+numpy
+scikit-learn
+nltk
+spacy
+pdfplumber
+python-docx
+pymongo
